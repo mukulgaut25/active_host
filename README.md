@@ -1,22 +1,20 @@
-## Welcome to GitHub Pages
+## Welcome to GitHub Page
 A single Bash script to create find active host.
 
 I created it because I wanted a another way out of nmap to find active host inside my internal network, without any special requirements and dependencies. Works on Linux and OSX both.
 
 ### Usage
-Its very simple just download the file script file and navigate to your downloaded folder where to place your downloaded file and just run ./active_host IP 
+Its very simple just download the file script file and navigate to your downloaded folder where to place your downloaded file and just run `./active_host IP` 
 
-# Header 1
-## Header 2
-### Header 3
 
-- Bulleted
-- List
+![](/screenshot3.png)
 
-1. Numbered
-2. List
+If you didnt supply the any IP Address you may get this error or invalid argument 
 
-**Bold** and _Italic_ and `Code` text
+![](/screenshot1.png)
 
-[Link](url) and ![Image](src)
-```
+After that just dispence the IP address of your internal network to search like this 
+
+![](/screenshot2.png)
+
+
