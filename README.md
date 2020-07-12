@@ -12,7 +12,7 @@ If you didn't supply the any IP Address you may get this error or invalid argume
 
 ![](/screenshot1.png)
 
-After that just dispence the IP address of your internal network you wanna search for, then supply the number of hosts you wanna serach for and you are good to go.
+To execute just dispence the IP address of your internal network you wanna search for, then supply the number of hosts you wanna serach for and you are good to go.
 
 ![](/Screenshot2.png)
 
