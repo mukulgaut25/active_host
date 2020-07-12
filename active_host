@@ -1,0 +1,34 @@
+#!/bin/bash
+
+#scripts finds out the current active hosts using ping only in internal network
+
+#checking ip range validity
+if [ $# != 1 ]; then
+        echo "Invalid numbers of argument (only one IP)"
+        exit 1;
+fi
+
+#current time
+echo "Current time:`date`"
+
+#valiadting ip address
+INPUT=$1
+
+REGEX="[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}"
+
+#Checking Regex
+if ! [[ $INPUT =~ $REGEX ]]; then
+        echo "invalid Input"
+        exit 2;
+fi
+
+IP=${BASH_REMATCH[0]}
+IP=$(echo "$IP" | cut -d "." -f 1,2,3)
+
+#number of hosts 
+read -p "Enter number of host you wanna search : " n
+
+HOST=$(for range in $( seq 1 $n); do ping -c 1 $IP.$range; done | grep ttl | wc -l)
+echo "Active host: $HOST"
+
+
